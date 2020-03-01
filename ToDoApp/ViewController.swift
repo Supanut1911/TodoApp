@@ -12,7 +12,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let todoItem = TodoItem(title: "red news", completed: false, createdAt: Date(), itemIdentifier: UUID())
+        
+//        todoItem.saveItem()
+        let todos = DataManager.loadAll(TodoItem.self)
+        
+        print(todos)
     }
 
 
